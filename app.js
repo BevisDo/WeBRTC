@@ -40,9 +40,9 @@ io.on('connection', socket => {
     })
 });
   
-// server.listen(3000, () => {
-//     console.log('listening on *:3000');
-// });
+server.listen(process.env.PORT, () => {
+    console.log('listening on *:3000');
+});
 // server.listen(process.env.PORT, () => {
 //     console.log('listening on *:3000');
 // });
@@ -61,6 +61,6 @@ app.use((err, req, res, next) => {
     res.status(500);
     res.send('500 - server error');
 })
-app.listen(process.env.PORT, () => console.log(
-    `Dang chay o port ${port};` + 'nhan Ctrl - C de dung lai'
-))
+// app.listen(process.env.PORT, () => console.log(
+//     `Dang chay o port ${port};` + 'nhan Ctrl - C de dung lai'
+// ))
