@@ -9,9 +9,9 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 const arrUserInfo =[]
-const config = require('config')
+// const config = require('config')
 
-let xirsys = config.get('xirsys')
+// let xirsys = config.get('xirsys')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
