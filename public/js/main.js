@@ -2,6 +2,25 @@ const socket = io('https://webrtc-giuaki.herokuapp.com/');
 
 $('#chat').hide();
 
+let customConfig;
+
+$.ajax({
+    url:"https://service.xirsys.com/ice",
+    data:{
+        ident:"doanhtuan52",
+        secret:"8ed1c3b2-42f3-11ec-871b-0242ac130003",
+        domain: "https://webrtc-giuaki.herokuapp.com/",
+        application:"default",
+        room:"default",
+        secure: 1
+    },
+    success: function(data,status){
+        customConfig = data.d;
+        console.log(customConfig);
+    },
+    async: false
+})
+
 socket.on('DANH_SACH_ONLINE',arrUserInfo=>{
     $('#chat').show();
     $('#sign').hide();
@@ -28,7 +47,7 @@ function openStream(){
 function playStream(idVideoTag,stream){
     const video = document.getElementById(idVideoTag);
     video.srcObject = stream;
-    video.load();
+    video.play();
 }
 
 // openStream()
