@@ -40,12 +40,12 @@ io.on('connection', socket => {
     })
 });
   
-// server.listen(3000, () => {
-//     console.log('listening on *:3000');
-// });
-server.listen(process.env.PORT, () => {
+server.listen(3000, () => {
     console.log('listening on *:3000');
 });
+// server.listen(process.env.PORT, () => {
+//     console.log('listening on *:3000');
+// });
 
 //custom 404 page
 app.use((req, res) => {
