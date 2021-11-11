@@ -35,7 +35,7 @@ function playStream(idVideoTag,stream){
 // .then(stream => playStream('localStream',stream));
 
 //Tao id nguoi goi
-const peer = new Peer(); 
+const peer = new Peer({key:'peerjs',host:'9000-rose-parrot-zmguzpj2.ws-us18.gitpod.io',secure: true, port:443}); 
 peer.on('open',id => {
     $('#my-id').append(id);
     $('#btnSign').click(()=>{
