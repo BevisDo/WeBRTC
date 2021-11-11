@@ -1,7 +1,7 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars')
 const app = express();
-// const port = 3000;
+const port = 3000;
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const http = require('http');
@@ -40,7 +40,7 @@ io.on('connection', socket => {
     })
 });
   
-server.listen(process.env.PORT, () => {
+server.listen(process.env.PORT||3000, () => {
     console.log('listening on *:3000');
 });
 // server.listen(process.env.PORT, () => {
@@ -61,6 +61,6 @@ app.use((err, req, res, next) => {
     res.status(500);
     res.send('500 - server error');
 })
-// app.listen(process.env.PORT, () => console.log(
+// app.listen(port, () => console.log(
 //     `Dang chay o port ${port};` + 'nhan Ctrl - C de dung lai'
 // ))
