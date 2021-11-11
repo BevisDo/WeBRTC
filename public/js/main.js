@@ -1,4 +1,4 @@
-const socket = io('https://webrtc-giuaki.herokuapp.com/');
+const socket = io('http://localhost:3000');
 
 $('#chat').hide();
 
@@ -14,7 +14,7 @@ socket.on('DANH_SACH_ONLINE',arrUserInfo=>{
         $('#ulUser').append(`<li id="${peerId}">${ten}</li>`);
     })
     socket.on('NGAT_KET_NOI',peerId=>{
-        $('#${peerId}').remove();
+        $(`#${peerId}`).remove();
     })
 })
 
