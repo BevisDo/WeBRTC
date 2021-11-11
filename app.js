@@ -11,6 +11,8 @@ const io = new Server(server);
 const arrUserInfo =[]
 const config = require('config')
 
+let xirsys = config.get('xirsys')
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.engine('handlebars', expressHandlebars({
