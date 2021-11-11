@@ -64,30 +64,3 @@ app.use((err, req, res, next) => {
 // app.listen(port, () => console.log(
 //     `Dang chay o port ${port};` + 'nhan Ctrl - C de dung lai'
 // ))
-// Node Get ICE STUN and TURN list
-let o = {
-    format: "https://webrtc-giuaki.herokuapp.com/"
-};
-
-let bodyString = JSON.stringify(o);
-let https = require("https");
-let options = {
-    host: "global.xirsys.net",
-    path: "/_turn/MyFirstApp",
-    method: "PUT",
-    headers: {
-        "Authorization": "Basic " + Buffer.from("doanhtuan52:8ed1c3b2-42f3-11ec-871b-0242ac130003").toString("base64"),
-        "Content-Type": "application/json",
-        "Content-Length": bodyString.length
-    }
-};
-let httpreq = https.request(options, function(httpres) {
-    let str = "";
-    httpres.on("data", function(data){ str += data; });
-    httpres.on("error", function(e){ console.log("error: ",e); });
-    httpres.on("end", function(){ 
-        console.log("ICE List: ", str);
-    });
-});
-httpreq.on("error", function(e){ console.log("request error: ",e); });
-httpreq.end();
