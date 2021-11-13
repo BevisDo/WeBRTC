@@ -1,0 +1,37 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(32, 32, 32);
+}
+
+.sign-form{
+    display: grid;
+    place-items: center;
+}
+.parent{
+    padding-top: 200px;
+    text-align: center;
+    color: white;
+}
+
+.input-sign{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    border-width: 1px;
+    
+    
+    background-color: white;
+}
+.input-sign[type = "text"]{
+    padding-left: 10px;
+}
+
+.btn-sign{
+    width: fit-content;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    border-width: 1px;
+
+    background-color: turquoise;
+    color: white;
+}
