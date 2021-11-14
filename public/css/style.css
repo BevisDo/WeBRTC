@@ -3,12 +3,13 @@
     background-color: rgb(32, 32, 32);
 }
 
+
 .sign-form{
     display: grid;
     place-items: center;
 }
 .parent{
-    padding-top: 200px;
+    height: 50%;
     text-align: center;
     color: white;
 }
@@ -17,7 +18,7 @@
     width: 300px;
     height: 40px;
     border-radius: 10px 0 0 10px;
-    border-width: 1px;
+    border-width: 0px;
     
     
     background-color: white;
@@ -30,8 +31,139 @@
     width: fit-content;
     height: 40px;
     border-radius: 0 10px 10px 0;
-    border-width: 1px;
+    border-width: 0px;
 
     background-color: turquoise;
     color: white;
+}
+
+/* chat */
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+    
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+}
+
+* {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+h1{
+    height: fit-content;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+.remoteStream {
+    height: 78%;
+    margin: 10px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.myID {
+    height: 18%;
+    margin: 10px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+
+    color:white
+}
+
+.onlineList {
+    height: 58%;
+    margin: 10px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+
+    color: white;
+
+}
+
+.localStream {
+    height: 38%;
+    margin: 10px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    
+    background-color: black;
+}
+
+.call-input{
+    height: auto;
+    width: 70%;
+    margin-left:1rem;
+    padding-left: 10px;
+
+    border-radius: 6px 0 0 6px;
+    border-width: 0.5px;
+
+    background-color:white
+}
+
+#btnCall{
+    height:auto;
+    width: 20%;
+
+    border-radius:0 6px 6px 0;
+    border-width: 0.5px;
+    background-color: turquoise;
+
+}
+
+
+
+#my-id {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 8px;
+}
+
+#onlineList {
+    height: auto; 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+
+}
+
+#ulUser {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 8px 8px;
+
+    list-style-type:none;
+    display: flex;
+    flex-flow:column;
+    
+
+}
+
+li:hover{
+    color: turquoise
+    
+}
+
+#remoteStream, #localStream {
+    background-color:black;
+    border-radius: 8px
 }
