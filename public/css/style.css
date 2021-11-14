@@ -128,7 +128,6 @@ h1{
 }
 
 
-
 #my-id {
     justify-content: center;
     align-items: center;
@@ -146,7 +145,7 @@ h1{
 }
 
 #ulUser {
-    height: 80%;
+    height: 27rem;
     display: flex;
     align-items: center;
     border-radius: 0px 0px 8px 8px;
