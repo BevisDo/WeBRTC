@@ -1,17 +1,41 @@
+{{!-- <div id="chat">
+    <p>Online</p>
+    <ul id="ulUser">
+        
+    </ul>
 
-<div id="chat">
-<p>Online</p>
-<ul id="ulUser">
-    
-</ul>
-<h3 id="my-id">Your ID:</h3>
-<video id="localStream" controls></video>
-<br /><br />
-<video id="remoteStream"controls></video>
-<br /><br />
-<input type="text" id="remote-id">
-<button id="btnCall">Call</button>
-</div>
+    <h3 id="my-id">Your ID:</h3>
+    <video id="localStream" controls></video>
+    <br /><br />
+    <video id="remoteStream"controls></video>
+    <br /><br />
+    <input type="text" id="remote-id">
+    <button id="btnCall">Call</button>
+</div> --}}
+
+        <div class="row" id="chat">
+            <div class="col-lg-9 h-100">
+                <div class="remoteStream">
+                    <video id="remoteStream"controls></video>
+                </div>
+                <div class="myID">
+                    <h3 id="my-id">Your ID:</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 h-100">
+                <div class="onlineList">
+                    <h2 id="onlineList">List online</h2>
+                    <ul id="ulUser"></ul>
+                    <input class="call-input" type="text" id="remote-id">
+                    <button id="btnCall">Call</button>
+                </div>
+                <div class="localStream">
+                    <video id="localStream" controls></video>
+                </div>
+            </div>
+        </div>
+
+
 
 {{!-- <div id="sign">
     <div class="center">
@@ -21,6 +45,7 @@
         </div>
     </div>
 </div> --}}
+{{!--  --}}
 
 <div class="sign-form" id="sign">
     <div class="parent">
